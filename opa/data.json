@@ -1,0 +1,8 @@
+{
+    "exceptions": {
+        "repositories": [
+            "SAGA/payment-gateway-api",
+            "SAGA/core-architecture"
+        ]
+    }
+}

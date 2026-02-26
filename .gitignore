@@ -1,0 +1,42 @@
+# Inteligência Artificial / Agentes / Prompts
+.agent/
+.gemini/
+.claude/
+brainstorm.md
+
+# Testes e Relatórios Locais
+tests/
+.pytest_cache/
+test_*.txt
+*mockup_*.py
+
+# Caches de Linting
+.ruff_cache/
+.mypy_cache/
+.coverage
+
+# Ambientes Python e Arquivos Compilados
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Node.js & Frontend (React/Vite)
+node_modules/
+dist/
+build/
+.npm/
+
+# Logs e Variáveis de Ambiente
+.env
+.env.local
+*.log
+
+# Editores de Código e Sistema Operacional
+.vscode/
+.idea/
+*.swp
+.DS_Store
