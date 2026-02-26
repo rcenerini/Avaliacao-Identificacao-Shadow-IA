@@ -155,8 +155,8 @@ function App() {
 
     return (
         <div className="layout-container">
-            {/* Header Centralizado - Padrão Cielo */}
-            <header className="cielo-header">
+            {/* Header Centralizado - Padrão Corporativo */}
+            <header className="app-header">
                 <div className="header-content" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <div style={{ display: 'flex', flexDirection: 'column' }}>
                         <div className="logo-area" onClick={navToLanding} style={{ cursor: 'pointer' }}>
@@ -189,9 +189,9 @@ function App() {
                         </div>
 
                         <div className="info-sections">
-                            <h2 style={{ fontSize: '28px', color: 'var(--cielo-blue-dark)', marginBottom: '16px', gridColumn: '1 / -1', textAlign: 'center' }}>O que é o SAGA Scanner?</h2>
+                            <h2 style={{ fontSize: '28px', color: 'var(--app-blue-dark)', marginBottom: '16px', gridColumn: '1 / -1', textAlign: 'center' }}>O que é o SAGA Scanner?</h2>
                             <p style={{ fontSize: '16px', color: 'var(--text-dark)', lineHeight: '1.6', marginBottom: '32px', gridColumn: '1 / -1', textAlign: 'center', maxWidth: '800px', margin: '0 auto 32px auto' }}>
-                                O SAGA (Sistema de Análise e Gerenciamento de Ameaças) atua preventivamente nas esteiras de DevOps para detectar e conter a proliferação de Shadow AI. Ele realiza análise estática e heurística de código em tempo real via Webhook ou através de varreduras agendadas, garantindo que o desenvolvimento com Generative AI e Context Protocols ocorra sob as diretrizes de Arquitetura da Cielo.
+                                O SAGA (Sistema de Análise e Gerenciamento de Ameaças) atua preventivamente nas esteiras de DevOps para detectar e conter a proliferação de Shadow AI. Ele realiza análise estática e heurística de código em tempo real via Webhook ou através de varreduras agendadas, garantindo que o desenvolvimento com Generative AI e Context Protocols ocorra sob as diretrizes de Arquitetura Corporativa.
                             </p>
                             <div className="info-card">
                                 <h3>O que é o Shadow AI?</h3>
@@ -374,7 +374,7 @@ function App() {
                                 <button
                                     type="submit"
                                     disabled={isSaving}
-                                    style={{ padding: '12px 32px', borderRadius: '8px', border: 'none', background: 'var(--cielo-blue-dark)', color: 'white', fontWeight: 'bold', cursor: isSaving ? 'wait' : 'pointer', fontSize: '15px' }}
+                                    style={{ padding: '12px 32px', borderRadius: '8px', border: 'none', background: 'var(--app-blue-dark)', color: 'white', fontWeight: 'bold', cursor: isSaving ? 'wait' : 'pointer', fontSize: '15px' }}
                                 >
                                     {isSaving ? 'Salvando...' : 'Autorizar'}
                                 </button>
@@ -404,7 +404,7 @@ function App() {
                                             </div>
                                             <button
                                                 onClick={() => handleDeleteException(rule.repository, rule.lib)}
-                                                style={{ background: 'transparent', border: 'none', color: 'var(--cielo-red)', cursor: 'pointer', padding: '4px' }}
+                                                style={{ background: 'transparent', border: 'none', color: 'var(--danger-color)', cursor: 'pointer', padding: '4px' }}
                                                 title="Remover Permissão"
                                             >
                                                 <Trash2 size={18} />

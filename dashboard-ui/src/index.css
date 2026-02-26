@@ -1,7 +1,7 @@
 /* Reset & Base Variables */
 :root {
-  --cielo-blue-primary: #00AEEF;
-  --cielo-blue-dark: #014A8E;
+  --app-blue-primary: #00AEEF;
+  --app-blue-dark: #014A8E;
   --bg-color: #FFFFFF;
   --bg-color-alt: #F8F9FA;
   --text-dark: #333333;
@@ -34,9 +34,9 @@ body {
   flex-direction: column;
 }
 
-/* Header Cielo Theme */
-.cielo-header {
-  background: linear-gradient(90deg, var(--cielo-blue-dark) 0%, var(--cielo-blue-primary) 100%);
+/* Header Theme */
+.app-header {
+  background: linear-gradient(90deg, var(--app-blue-dark) 0%, var(--app-blue-primary) 100%);
   color: white;
   padding: 24px 0;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -103,7 +103,7 @@ body {
 .stat-number {
   font-size: 36px;
   font-weight: 700;
-  color: var(--cielo-blue-dark);
+  color: var(--app-blue-dark);
 }
 
 .error-card .stat-number {
@@ -165,7 +165,7 @@ body {
 .repo-title h3 {
   font-size: 16px;
   font-weight: 600;
-  color: var(--cielo-blue-dark);
+  color: var(--app-blue-dark);
 }
 
 /* Badges */
@@ -287,7 +287,7 @@ body {
 }
 
 .hero-icon-main {
-  color: var(--cielo-blue-primary);
+  color: var(--app-blue-primary);
 }
 
 .hero-icon-badge {
@@ -328,7 +328,7 @@ body {
 
 .scan-card h3 {
   font-size: 20px;
-  color: var(--cielo-blue-dark);
+  color: var(--app-blue-dark);
   margin-bottom: 8px;
 }
 
@@ -354,12 +354,12 @@ body {
 }
 
 .scan-form input:focus {
-  border-color: var(--cielo-blue-primary);
+  border-color: var(--app-blue-primary);
   box-shadow: 0 0 0 3px rgba(0, 174, 239, 0.1);
 }
 
 .scan-form button {
-  background: var(--cielo-blue-dark);
+  background: var(--app-blue-dark);
   color: white;
   border: none;
   padding: 0 24px;
@@ -374,7 +374,7 @@ body {
 }
 
 .scan-form button:hover:not(:disabled) {
-  background: var(--cielo-blue-primary);
+  background: var(--app-blue-primary);
 }
 
 .scan-form button:disabled {
@@ -400,7 +400,7 @@ body {
 }
 
 .feature-item svg {
-  color: var(--cielo-blue-primary);
+  color: var(--app-blue-primary);
   margin-bottom: 12px;
 }
 
@@ -430,7 +430,7 @@ body {
   width: 50px;
   height: 50px;
   border: 4px solid var(--border-color);
-  border-top-color: var(--cielo-blue-primary);
+  border-top-color: var(--app-blue-primary);
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin-bottom: 24px;
@@ -444,7 +444,7 @@ body {
 
 .scanning-view h2 {
   font-size: 24px;
-  color: var(--cielo-blue-dark);
+  color: var(--app-blue-dark);
   margin-bottom: 12px;
 }
 
@@ -513,7 +513,7 @@ body {
 
 .info-card h3 {
   font-size: 18px;
-  color: var(--cielo-blue-dark);
+  color: var(--app-blue-dark);
   margin-bottom: 16px;
   display: flex;
   align-items: center;
@@ -552,7 +552,7 @@ body {
 
 .info-list li::before {
   content: '→';
-  color: var(--cielo-blue-primary);
+  color: var(--app-blue-primary);
   position: absolute;
   left: 0;
   top: 0;

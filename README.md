@@ -48,7 +48,7 @@ Desenvolvido via `FastAPI` (porta `8000`), a camada backend fornece uma via de m
 *   **Inline Scan Endpoint (`/scan/inline`):** Um Webhook leve e performático. Quando configurado um GitHub Action ou GitLab Runner nos Pull Requests, a esteira envia o Delta da Mudança (*diff*) e a API devolve falha arquitetural (mensagem formatada de orientação) em tempo real caso encontre a quebra de padrão de "Shadow AI".
 
 ### 3. SAGA Interface de Visualização Executiva (Frontend React/Vite)
-Nenhum monitoramento é eficaz sem uma camada visual orientada à Cyber. Uma UI interativa em **React JS + Vite** rodando internamente (porta `5173`) desenhada sob o *Design System Corporativo da Cielo* (Gradient Azul Escuro/Azul Claro e Fundos Brancos Limpos).
+Nenhum monitoramento é eficaz sem uma camada visual orientada à Cyber. Uma UI interativa em **React JS + Vite** rodando internamente (porta `5173`) desenhada sob o *Design System Corporativo* (Gradient Azul Escuro/Azul Claro e Fundos Brancos Limpos).
 A landing Page permite acesso direto aos cards que escrutinam a auditoria, onde cada violação encontrada conta com: **Nível de Risco**, **Nome da Assinatura Disparada**, **Linha do Código** e o **Snippet (Trecho de código da violação)**.
 
 ---
