@@ -95,5 +95,3 @@ O sistema deve agir ativamente contra o desenvolvedor que introduziu a IA de for
 Neste modelo Shift-Left, a esteira não compilará infraestrutura, empoderando o autor a reverter ou acionar as devidas esferas de aprovação arquitetural corporativa.
 
 ---
-
-*Desenvolvido pela Área de Auditoria, Segurança e Governança.*
