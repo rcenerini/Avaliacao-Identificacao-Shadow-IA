@@ -11,7 +11,6 @@
 <div align="center">
   <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow" alt="Status" />
   <img src="https://img.shields.io/badge/Security-Shift--Left-blue" alt="Security Paradigm" />
-  <img src="https://img.shields.io/badge/Powered%20By-Cielo%20SecOps-00AEEF" alt="Powered By" />
 </div>
 
 <h1 align="center">🛡️ SAGA: Sistema de Análise e Gerenciamento de Ameaças (Shadow AI & MCP Scanner)</h1>
