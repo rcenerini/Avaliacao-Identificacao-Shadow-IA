@@ -32,7 +32,40 @@ Este motor rastreia o GitHub/GitLab, analisa *Abstract Syntax Trees* e lê arqui
 
 ## 🏗️ Arquitetura da Solução
 
-O projeto é inteiramente desacoplado, sendo composto por **três** módulos essenciais que rodam como microsserviços providos via Docker:
+O ecossistema SAGA foi desenhado para atuar de forma invisível e escalável, integrando-se perfeitamente ao ciclo de vida de desenvolvimento de software (SDLC). Abaixo, ilustramos a arquitetura através de três perspectivas fundamentais: a **Arquitetura Técnica** que sustenta os microsserviços, a **Arquitetura Funcional** que descreve as capacidades do motor, e o **Fluxo de Dados (DFD)** que detalha a jornada da informação desde o *commit* até a auditoria final.
+
+### 🌐 Arquitetura Técnica
+
+<div align="center">
+  <img src="Arquitetura%20Tecnica.png" alt="Arquitetura Técnica do SAGA" width="800"/>
+</div>
+
+A infraestrutura técnica do SAGA é construída sob uma fundação moderna e conteinerizada. Utilizando **Docker Compose**, orquestramos a resiliência de três camadas primárias: o *Frontend* reativo (React/Vite) servindo o Dashboard, o *Backend Integrator* (FastAPI/Python) para roteamento pesado e Webhooks, e a pedra angular do projeto — o **Open Policy Agent (OPA)** —, responsável pela governação de *Policy-as-Code*, garantindo que permissões e bloqueios de Shadow AI sejam imutáveis, versionáveis e descentralizados.
+
+### ⚙️ Arquitetura Funcional
+
+<div align="center">
+  <img src="Arquitetura%20Funcional.png" alt="Arquitetura Funcional do SAGA" width="800"/>
+</div>
+
+Do ponto de vista funcional, o sistema SAGA se divide em dois esquemas de operação principais. O lado esquerdo das operações compreende os recursos interativos via Dashboard: escaneamentos *ad-hoc* solicitados por auditores de segurança e a gestão administrativa manual. O lado direito abriga o coração da automação: varreduras em lote (cron jobs noturnos) para conformidade global de Segurança da Informação, análise sintática avançada via `AST / Regex Engine` e os disparos assíncronos (**Shift-Left**) que barram *commits* perigosos diretamente na esteira CI/CD.
+
+### 🔄 Data Flow Diagram (DFD) - Nível 1
+
+<div align="center">
+  <img src="DFD%20-%20Nivel%201.png" alt="DFD Nível 1 do SAGA" width="800"/>
+</div>
+
+O Fluxo de Dados (DFD Nível 1) evidencia de forma clara a roteirização da validação de segurança do código-fonte:
+1. O desenvolvedor submete um código novo (Commit / Pull Request).
+2. O agente de CI remoto (GitHub Actions/GitLab Runner) aponta o *payload* do código alterado (diff) para a nossa API Gateway.
+3. Este código é destrinchado pelo **Motor Analítico (AST/Regexes)**, que procura dependências ou assinaturas injetadas de IA em backdoors, sendo validado simultaneamente contra o **Motor OPA** — que checa se o repositório em questão possui uma isenção/permissão ativa documentada.
+4. O *Verdict* é devolvido em tempo real: passe-livre para compilar a aplicação ou **Block (Fail)** orientando o desenvolvedor a revisar suas bibliotecas com a Arquitetura Corporativa.
+
+---
+
+### Módulos Essenciais (Microsserviços)
+O projeto é inteiramente desacoplado, sendo composto por **três** módulos primários servidos via Docker:
 
 ### 1. Motor Central Analítico (Regex & Rules Engine)
 Construído em código nativo, esse módulo contém as Assinaturas Heurísticas e Padrões (Regexes Pydantic) refinados por nós. Ele é capaz de detectar:
